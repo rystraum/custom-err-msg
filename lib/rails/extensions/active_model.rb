@@ -5,7 +5,6 @@ module ActiveModel
       attr_name = attribute.to_s.tr('.', '_').humanize
       attr_name = @base.class.human_attribute_name(attribute, default: attr_name)
 
-      puts "mmmm: #{message}"
       if message.start_with?('^')
         I18n.t(:"errors.format", {
           default:  "%{message}",
